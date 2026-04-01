@@ -89,7 +89,7 @@ export default function Navbar() {
 
           {/* Hamburger button */}
           <button
-            className={`text-white p-2 ${showFullNav ? 'md:hidden' : ''}`}
+            className={`text-white p-2 -mr-2 ${showFullNav ? 'md:hidden' : ''}`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Menu"
           >

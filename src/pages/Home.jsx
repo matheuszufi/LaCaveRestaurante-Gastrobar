@@ -64,12 +64,17 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-dark-900">
-                Por que escolher a <span className="text-gold-600">La Cave</span>?
+              <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-4xl lg:text-5xl font-normal text-dark-900">
+                Por que escolher a <span className="font-bold text-gold-600">La Cave</span>?
               </motion.h2>
               <motion.p variants={fadeUp} custom={1} className="text-dark-600 text-lg mt-4 font-body leading-relaxed">
                 Cada detalhe pensado para proporcionar uma experiência gastronômica completa.
               </motion.p>
+              <motion.div variants={fadeUp} custom={2}>
+                <Link to="/contato" className="inline-block mt-6 text-sm px-6 py-3 border border-amber-800 bg-transparent text-dark-900 rounded-none uppercase tracking-wider hover:bg-amber-800 hover:text-white transition-colors duration-300">
+                  ENTRAR EM CONTATO
+                </Link>
+              </motion.div>
             </motion.div>
 
             {/* Vídeo à direita */}
