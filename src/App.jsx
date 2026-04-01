@@ -1,0 +1,35 @@
+import { Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout'
+import Home from './pages/Home'
+import Menu from './pages/Menu'
+import Reservas from './pages/Reservas'
+import Sobre from './pages/Sobre'
+import Contato from './pages/Contato'
+import Admin from './pages/Admin'
+import AdminLogin from './pages/AdminLogin'
+import ProtectedRoute from './components/ProtectedRoute'
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="cardapio" element={<Menu />} />
+        <Route path="reservas" element={<Reservas />} />
+        <Route path="sobre" element={<Sobre />} />
+        <Route path="contato" element={<Contato />} />
+      </Route>
+      <Route path="/admin/login" element={<AdminLogin />} />
+      <Route
+        path="/admin"
+        element={
+          <ProtectedRoute>
+            <Admin />
+          </ProtectedRoute>
+        }
+      />
+    </Routes>
+  )
+}
+
+export default App
