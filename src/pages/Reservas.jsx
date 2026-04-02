@@ -7,7 +7,6 @@ import { CalendarDays, Clock, Users, User, Phone, Mail, CheckCircle, Loader2 } f
 import { format, addDays, isBefore, startOfToday } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import toast from 'react-hot-toast'
-import { createReservation } from '../firebase/reservations'
 
 const reservationSchema = z.object({
   name: z.string().min(3, 'Nome deve ter pelo menos 3 caracteres'),
@@ -70,7 +69,7 @@ export default function Reservas() {
   async function onSubmit(data) {
     setIsSubmitting(true)
     try {
-      await createReservation(data)
+      await new Promise((resolve) => setTimeout(resolve, 1000))
       setSubmitted(true)
       toast.success('Reserva realizada com sucesso!')
       reset()

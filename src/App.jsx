@@ -5,9 +5,6 @@ import Menu from './pages/Menu'
 import Reservas from './pages/Reservas'
 import Sobre from './pages/Sobre'
 import Contato from './pages/Contato'
-import Admin from './pages/Admin'
-import AdminLogin from './pages/AdminLogin'
-import ProtectedRoute from './components/ProtectedRoute'
 
 function App() {
   return (
@@ -19,15 +16,6 @@ function App() {
         <Route path="sobre" element={<Sobre />} />
         <Route path="contato" element={<Contato />} />
       </Route>
-      <Route path="/admin/login" element={<AdminLogin />} />
-      <Route
-        path="/admin"
-        element={
-          <ProtectedRoute>
-            <Admin />
-          </ProtectedRoute>
-        }
-      />
     </Routes>
   )
 }

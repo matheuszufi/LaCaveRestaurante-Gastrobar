@@ -5,8 +5,6 @@ import { motion } from 'framer-motion'
 import { MapPin, Phone, Mail, Clock, Instagram, Send, Loader2 } from 'lucide-react'
 import { useState } from 'react'
 import toast from 'react-hot-toast'
-import { addDoc, collection, Timestamp } from 'firebase/firestore'
-import { db } from '../firebase/config'
 
 const contactSchema = z.object({
   name: z.string().min(3, 'Nome deve ter pelo menos 3 caracteres'),
@@ -58,10 +56,7 @@ export default function Contato() {
   async function onSubmit(data) {
     setIsSubmitting(true)
     try {
-      await addDoc(collection(db, 'messages'), {
-        ...data,
-        createdAt: Timestamp.now(),
-      })
+      await new Promise((resolve) => setTimeout(resolve, 1000))
       toast.success('Mensagem enviada com sucesso!')
       reset()
     } catch {
