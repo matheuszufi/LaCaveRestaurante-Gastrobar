@@ -45,7 +45,7 @@ export default function Sobre() {
         >
           <p className="text-gold-500 uppercase tracking-[0.3em] text-sm mb-4">Nossa história</p>
           <h1 className="section-title">
-            Sobre a <span className="font-script text-gold-500">La Cave</span>
+            Sobre a <span className="font-bold text-gold-500">La Cave</span>
           </h1>
           <p className="section-subtitle mx-auto">
             Conheça a história, a paixão e os valores que fazem da La Cave uma
@@ -61,7 +61,7 @@ export default function Sobre() {
             viewport={{ once: true }}
           >
             <motion.h2 variants={fadeUp} className="font-display text-3xl text-white mb-6">
-              Uma jornada de <span className="font-script text-gold-500">sabores</span>
+              Uma jornada de <span className="font-bold text-gold-500">sabores</span>
             </motion.h2>
             <motion.p variants={fadeUp} custom={1} className="text-dark-300 font-body leading-relaxed mb-4">
               A La Cave nasceu do sonho de criar um espaço onde a gastronomia
@@ -111,7 +111,7 @@ export default function Sobre() {
           className="text-center mb-14"
         >
           <motion.h2 variants={fadeUp} className="section-title">
-            Nossos <span className="font-script text-gold-500">Valores</span>
+            Nossos <span className="font-bold text-gold-500">Valores</span>
           </motion.h2>
         </motion.div>
 

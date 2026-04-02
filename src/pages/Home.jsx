@@ -187,7 +187,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <motion.h2 variants={fadeUp} className="section-title">
-              Reserve sua <span className="font-script text-gold-500">experiência</span>
+              Reserve sua <span className="font-bold text-gold-500">experiência</span>
             </motion.h2>
             <motion.p variants={fadeUp} custom={1} className="section-subtitle mx-auto mb-10">
               Garanta sua mesa e desfrute de uma noite especial na La Cave. Reservas
@@ -214,7 +214,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-4xl lg:text-5xl font-normal text-dark-900">
-                Por que escolher a <span className="font-script text-gold-600">La Cave</span>?
+                Por que escolher a <span className="font-bold text-gold-600">La Cave</span>?
               </motion.h2>
               <motion.p variants={fadeUp} custom={1} className="text-dark-600 text-lg mt-4 font-body leading-relaxed">
                 Cada detalhe pensado para proporcionar uma experiência gastronômica completa.

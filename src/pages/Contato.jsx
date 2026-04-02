@@ -77,7 +77,7 @@ export default function Contato() {
         >
           <p className="text-gold-500 uppercase tracking-[0.3em] text-sm mb-4">Fale conosco</p>
           <h1 className="section-title">
-            Entre em <span className="font-script text-gold-500">Contato</span>
+            Entre em <span className="font-bold text-gold-500">Contato</span>
           </h1>
           <p className="section-subtitle mx-auto">
             Estamos à disposição para atendê-lo. Envie sua mensagem ou visite-nos.
