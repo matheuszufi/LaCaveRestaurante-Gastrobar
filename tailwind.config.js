@@ -48,6 +48,7 @@ export default {
       fontFamily: {
         display: ['CODE', 'Playfair Display', 'serif'],
         body: ['CODE', 'Inter', 'sans-serif'],
+        script: ['MondiraScript', 'cursive'],
       },
     },
   },

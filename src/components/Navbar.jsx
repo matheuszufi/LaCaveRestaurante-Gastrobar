@@ -42,7 +42,16 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center h-20 relative">
+        <div className="flex items-center justify-between h-20 relative">
+          {/* Hamburger button - left */}
+          <button
+            className={`text-white p-2 ${showFullNav ? 'md:hidden' : ''}`}
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Menu"
+          >
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+
           {/* Logo - centered on Home, left on other pages */}
           {isHome ? (
             <div className="absolute left-1/2 -translate-x-1/2">
@@ -51,13 +60,12 @@ export default function Navbar() {
               </Link>
             </div>
           ) : (
-            <Link to="/" className="flex items-center gap-2 group">
-              <img src="/images/la-cave-logo.png" alt="La Cave" className="h-14 w-auto" />
-            </Link>
+            <div className="absolute left-1/2 -translate-x-1/2">
+              <Link to="/" className="flex items-center gap-2 group">
+                <img src="/images/la-cave-logo.png" alt="La Cave" className="h-14 w-auto" />
+              </Link>
+            </div>
           )}
-
-          {/* Spacer to push items right */}
-          <div className="flex-1" />
 
           {/* Desktop nav */}
           {showFullNav && (
@@ -87,14 +95,12 @@ export default function Navbar() {
             </div>
           )}
 
-          {/* Hamburger button */}
-          <button
-            className={`text-white p-2 -mr-2 ${showFullNav ? 'md:hidden' : ''}`}
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Menu"
-          >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+          {/* Language buttons - right */}
+          <div className="flex items-center gap-1 text-white text-sm font-body">
+            <button className="px-2 py-1 hover:text-gold-400 transition-colors">PT</button>
+            <span className="text-dark-500">|</span>
+            <button className="px-2 py-1 hover:text-gold-400 transition-colors">ESP</button>
+          </div>
         </div>
       </div>
 
@@ -121,7 +127,7 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <Link to="/reservas" className="btn-primary block text-center mt-4">
+              <Link to="/reservas" className="btn-primary block text-center mt-4 rounded-none">
                 Reservar Mesa
               </Link>
             </div>

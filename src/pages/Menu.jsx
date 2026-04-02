@@ -77,7 +77,7 @@ export default function Menu() {
         >
           <p className="text-gold-500 uppercase tracking-[0.3em] text-sm mb-4">Explore</p>
           <h1 className="section-title">
-            Nosso <span className="text-gold-500">Cardápio</span>
+            Nosso <span className="font-script text-gold-500">Cardápio</span>
           </h1>
           <p className="section-subtitle mx-auto">
             Sabores cuidadosamente selecionados para uma experiência única.
